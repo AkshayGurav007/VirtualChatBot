@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by anonymous (http://jsbin.com/pufuvimeha/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.leftside, .rightside{
+  height:80vh;
+  width:90%;
+}
+@media screen & (min-width:768px)
+{
+  .leftside, .rightside{
+    height:900vh;
+  }
+}
+.leftside{
+  background:#FB840D;
+}
+.rightside{
+background:white;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper {
+    width: 370px;
+}
+.wrapper .title {
+    background: #FB840D;
+    color: white;
+    line-height: 2.5;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+.msg{
+  text-align: center;
+  }
+.msg .img {
+  border-radius: 10%;
+   max-width: 100%;
+  height: auto;
+}
+#getwebsitebtn {
+    background-color:pink;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-size: 14px;
+    padding: 6px 15px;
+    margin-top: 4px;
+    margin-right: 10px;
+    display: block;
+    border-radius: 5px;
+  text-decoration: none;
+}
+.w3-bar .w3-button {
+    white-space: normal;
+}
+.wrapper .box {
+    border: 1px solid #efefef;
+    padding: 10px 15px;
+    min-height: 300px;
+    max-height: 300px;
+}
+.wrapper .box .item {
+    display: flex;
+    float: left;
+    margin: 10px 0;
+}
+
+.wrapper .typing-area {
+    width: 100%;
+    background: #efefef;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.wrapper .typing-area .input-field input:focus {
+  border-color: #007bff;}
+.wrapper .typing-area .input-field input:valid ~ button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="row no-gutters">
+<div class="col-md-6 no-gutters">
+<div class="leftside"></div>
+</div>
+
+<div class="col-md-6 no-gutters">
+<div class="rightside"></div>
+</div>
+</div>
+<div class="wrapper" >
+        <div class="title"  style="text-align:left;"><h4>IRIS</h4>
+          <h5><p>Hello &#128075;</p></h5>
+          <h6><p>I am Iris, a Virtual Assistant</p>
+            How may I help you?</div></h6>
+        <div class="box">
+            <div class="item">
+                <div class="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="msg">
+                  <img src="data:image/png;base64,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" alt="Avatar">
+                    Frequently Asked Quections❓<br>
+                </div>
+            </div>
+            <br clear="both">
+            <div class="item left">
+              <ul class="a">
+                <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="https://www.w3schools.com/spaces/" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">Can I redeem my FB before the original term?</a><br>
+            <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="https://www.w3schools.com/spaces/" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">How do I pay my Credit card bill?</a><br>
+                <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="https://www.w3schools.com/spaces/" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">How can I get my Account Statement?</a><br>
+                <a id="getwebsitebtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green w3-hide-small" href="https://www.w3schools.com/spaces/" target="_blank" onclick="ga('send', 'event', 'spacesFromTryit', 'click')">What is the tenure of Fixed deposit?</a><br>
+              </ul></div>
+  </div>
+        
+        <div class="typing-area">
+            <div class="input-field">
+                <input type="text" placeholder="Start a New Conversation" required>
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
